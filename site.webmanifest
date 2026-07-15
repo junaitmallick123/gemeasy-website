@@ -1,0 +1,16 @@
+{
+  "name": "GemEasy Government Procurement Consultancy",
+  "short_name": "GemEasy",
+  "description": "GeM assessment, government tender bidding and compliance assistance.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#073f80",
+  "icons": [
+    {
+      "src": "assets/gemeasy-logo.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
