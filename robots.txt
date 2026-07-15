@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://junaitmallick123.github.io/gemeasy-website/sitemap.xml
