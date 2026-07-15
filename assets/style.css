@@ -8,4 +8,5 @@
 @media(max-width:1100px){.service-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:950px){.review-card{flex-basis:calc(50% - 11px);margin-right:22px}}
 @media(max-width:650px){.service-grid{grid-template-columns:1fr}.review-card{flex-basis:100%;margin-right:0}.review-card p{min-height:0}.brand{height:50px;width:158px}.footer-brand{height:48px;width:175px}}
-.brand{width:184px;height:58px;background:transparent url('gemeasy-logo.svg') center/contain no-repeat;padding:0;overflow:visible;border-radius:0}.brand img{display:none}.footer-brand{width:190px;height:54px;padding:0;margin-bottom:22px;background-image:url('gemeasy-logo-light.svg')}
+.brand{width:132px;height:74px;background:#073f80 url('gemeasy-logo.png') center/contain no-repeat;padding:0;overflow:hidden;border-radius:7px;flex:0 0 132px}.brand img{display:none}.footer-brand{width:150px;height:94px;padding:0;margin-bottom:22px;background-image:url('gemeasy-logo.png');background-color:#073f80}.site-header{height:90px}.nav-links a.active:after{bottom:-33px}
+@media(max-width:650px){.site-header{height:74px}.nav-links{top:74px}.brand{width:108px;height:66px;flex-basis:108px}.footer-brand{width:140px;height:88px}}
