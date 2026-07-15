@@ -27,23 +27,28 @@ jobs:
           node <<'NODE'
           const fs = require('fs');
           const key = process.env.NEWSDATA_API_KEY;
-          const params = new URLSearchParams({
-            apikey: key,
-            country: 'in',
-            language: 'en',
-            q: 'government tender OR GeM portal OR procurement OR MSME OR BIS certification'
-          });
-          fetch('https://newsdata.io/api/1/latest?' + params).then(async response => {
+          const queries = ['government tender', 'GeM portal procurement', 'MSME public procurement', 'BIS NABL ISO GST compliance'];
+          const request = async q => {
+            const params = new URLSearchParams({apikey:key,country:'in',language:'en',q});
+            const response = await fetch('https://newsdata.io/api/1/latest?' + params);
             if (!response.ok) throw new Error('NewsData request failed: ' + response.status);
             return response.json();
-          }).then(data => {
-            const articles = (data.results || []).slice(0, 9).map(item => ({
-              title: item.title || '',
-              description: item.description || '',
-              url: item.link || '',
-              source: item.source_name || item.source_id || 'News source',
-              publishedAt: item.pubDate || ''
-            })).filter(item => item.title && item.url);
+          };
+          Promise.all(queries.map(request)).then(results => {
+            const strong = /(tender|e[ -]?procurement|public procurement|government contract|gem portal|government e.marketplace|msme procurement|purchase preference|bid document|nabl|bis certification|iso certification|gst compliance)/i;
+            const seen = new Set();
+            const articles = results.flatMap(data => data.results || [])
+              .filter(item => strong.test((item.title || '') + ' ' + (item.description || '')))
+              .filter(item => { const id=item.link || item.title; if(seen.has(id)) return false; seen.add(id); return true; })
+              .sort((a,b) => new Date(b.pubDate || 0) - new Date(a.pubDate || 0))
+              .slice(0, 9)
+              .map(item => ({
+                title: item.title || '',
+                description: item.description || '',
+                url: item.link || '',
+                source: item.source_name || item.source_id || 'News source',
+                publishedAt: item.pubDate || ''
+              })).filter(item => item.title && item.url);
             fs.writeFileSync('assets/news-feed.json', JSON.stringify({updatedAt:new Date().toISOString(),articles}, null, 2) + '\n');
           }).catch(error => { console.error(error); process.exit(1); });
           NODE
