@@ -1,0 +1,53 @@
+name: Refresh industry news
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch relevant Indian procurement news
+        env:
+          NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
+        run: |
+          if [ -z "$NEWSDATA_API_KEY" ]; then
+            echo "NEWSData API secret is not configured; keeping the current feed."
+            exit 0
+          fi
+          node <<'NODE'
+          const fs = require('fs');
+          const key = process.env.NEWSDATA_API_KEY;
+          const params = new URLSearchParams({
+            apikey: key,
+            country: 'in',
+            language: 'en',
+            q: 'government tender OR GeM portal OR procurement OR MSME OR BIS certification'
+          });
+          fetch('https://newsdata.io/api/1/latest?' + params).then(async response => {
+            if (!response.ok) throw new Error('NewsData request failed: ' + response.status);
+            return response.json();
+          }).then(data => {
+            const articles = (data.results || []).slice(0, 9).map(item => ({
+              title: item.title || '',
+              description: item.description || '',
+              url: item.link || '',
+              source: item.source_name || item.source_id || 'News source',
+              publishedAt: item.pubDate || ''
+            })).filter(item => item.title && item.url);
+            fs.writeFileSync('assets/news-feed.json', JSON.stringify({updatedAt:new Date().toISOString(),articles}, null, 2) + '\n');
+          }).catch(error => { console.error(error); process.exit(1); });
+          NODE
+      - name: Commit refreshed feed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/news-feed.json
+          git diff --cached --quiet || git commit -m "Refresh industry news feed"
+          git push
