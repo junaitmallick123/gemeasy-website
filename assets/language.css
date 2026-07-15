@@ -1,0 +1,8 @@
+/* English / Hindi language switch */
+.language-toggle{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 11px;border:1px solid #d6e2ef;border-radius:999px;background:#f7faff;color:#6d7f92;font:700 .72rem/1 DM Sans,sans-serif;cursor:pointer;transition:border-color .25s ease,background .25s ease,transform .25s ease;white-space:nowrap}
+.language-toggle:hover{border-color:#9fbde0;background:#eef6ff;transform:translateY(-1px)}
+.language-toggle [data-lang]{transition:color .2s ease}.language-toggle [data-lang].active{color:#0c61c9}.language-toggle .lang-divider{color:#b5c1cf}
+html[lang="hi-IN"] body{font-family:"Noto Sans Devanagari","DM Sans",sans-serif}
+html[lang="hi-IN"] h1,html[lang="hi-IN"] h2,html[lang="hi-IN"] h3,html[lang="hi-IN"] .button{letter-spacing:-.02em}
+@media(max-width:980px){.language-toggle{margin-left:auto}.nav-cta{margin-left:0}}
+@media(max-width:720px){.language-toggle{height:34px;padding:0 9px;font-size:.67rem}}
