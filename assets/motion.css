@@ -1,0 +1,27 @@
+/* GemEasy lightweight motion system */
+:root{--motion-ease:cubic-bezier(.22,1,.36,1);--motion-fast:420ms;--motion-slow:780ms}
+html{scroll-behavior:smooth}
+.site-header{transition:box-shadow .35s ease,background-color .35s ease,transform .35s ease}
+.site-header.motion-scrolled{box-shadow:0 10px 35px rgba(5,34,72,.1);background:rgba(255,255,255,.96);backdrop-filter:blur(16px)}
+.motion-ready .motion-reveal{opacity:0;transform:translate3d(0,28px,0);transition:opacity var(--motion-slow) var(--motion-ease),transform var(--motion-slow) var(--motion-ease);transition-delay:var(--motion-delay,0ms);will-change:opacity,transform}
+.motion-ready .motion-reveal.motion-left{transform:translate3d(-28px,0,0)}
+.motion-ready .motion-reveal.motion-right{transform:translate3d(28px,0,0)}
+.motion-ready .motion-reveal.is-visible{opacity:1;transform:translate3d(0,0,0);will-change:auto}
+.motion-ready .motion-stagger>*{opacity:0;transform:translate3d(0,22px,0);transition:opacity 650ms var(--motion-ease),transform 650ms var(--motion-ease);transition-delay:calc(var(--motion-index,0) * 75ms)}
+.motion-ready .motion-stagger.is-visible>*{opacity:1;transform:translate3d(0,0,0)}
+.hero-visual,.tender-status-card,.about-team-photo{transform:translate3d(var(--motion-x,0),var(--motion-y,0),0);transition:transform 500ms var(--motion-ease)}
+.motion-ready .hero-visual.is-floating,.motion-ready .tender-status-card.is-floating{animation:gentleFloat 6.5s ease-in-out infinite}
+.motion-ready .about-team-photo.is-floating{animation:gentleFloatSmall 7.5s ease-in-out infinite}
+@keyframes gentleFloat{0%,100%{translate:0 0}50%{translate:0 -9px}}
+@keyframes gentleFloatSmall{0%,100%{translate:0 0}50%{translate:0 -6px}}
+.page-hero:before,.tender-hero:before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;right:8%;top:-210px;background:radial-gradient(circle,rgba(94,169,255,.22),rgba(94,169,255,0) 70%);pointer-events:none;animation:ambientDrift 10s ease-in-out infinite alternate}
+@keyframes ambientDrift{to{transform:translate3d(-55px,35px,0) scale(1.12)}}
+.button{position:relative;overflow:hidden;transition:transform .28s var(--motion-ease),box-shadow .28s ease,background-color .28s ease}
+.button:hover{transform:translateY(-2px);box-shadow:0 13px 30px rgba(8,71,152,.18)}
+.button:after{content:"";position:absolute;top:-80%;left:-45%;width:28%;height:250%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);transform:rotate(18deg) translateX(-220%);transition:transform .7s var(--motion-ease);pointer-events:none}
+.button:hover:after{transform:rotate(18deg) translateX(620%)}
+.service-card,.tender-type-card,.guide-card-new,.news-card,.value-card,.capability-card,.direct-contact-card{transition:transform .34s var(--motion-ease),box-shadow .34s ease,border-color .34s ease}
+.service-card:hover,.capability-card:hover,.value-card:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(8,39,82,.11)}
+.brand{transition:transform .3s var(--motion-ease),filter .3s ease}.brand:hover{transform:translateY(-1px) scale(1.015)}
+@media(max-width:760px){.motion-ready .motion-reveal,.motion-ready .motion-reveal.motion-left,.motion-ready .motion-reveal.motion-right{transform:translate3d(0,18px,0)}.page-hero:before,.tender-hero:before{width:240px;height:240px;top:-150px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.motion-ready .motion-reveal,.motion-ready .motion-stagger>*,.motion-ready .hero-visual.is-floating,.motion-ready .tender-status-card.is-floating,.motion-ready .about-team-photo.is-floating,.page-hero:before,.tender-hero:before{opacity:1!important;transform:none!important;translate:none!important;animation:none!important;transition:none!important}.button:after{display:none}}
