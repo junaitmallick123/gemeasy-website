@@ -1,6 +1,9 @@
 name: Refresh industry news
 
 on:
+  push:
+    paths:
+      - '.github/workflows/refresh-news.yml'
   schedule:
     - cron: '17 */6 * * *'
   workflow_dispatch:
