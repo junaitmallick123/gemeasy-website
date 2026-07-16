@@ -447,3 +447,12 @@
 .contact-form .required-mark{display:inline;color:#d6322c;font-size:15px;font-weight:900;line-height:1}
 .contact-form .optional-mark{display:inline-flex;align-items:center;margin-left:7px;padding:3px 7px;border-radius:999px;background:#edf4fa;color:#6f8296;font-size:9px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;vertical-align:middle}
 .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+
+
+/* Exact 10-digit phone validation */
+.contact-form .phone-field-help{display:block;margin-top:6px;color:#73879b;font-size:10px;font-weight:650;line-height:1.35;transition:color .2s ease}
+.contact-form label.has-phone-error input[name="phone"]{border-color:#d6433b!important;background:#fff7f6!important;box-shadow:0 0 0 3px rgba(214,67,59,.09)!important}
+.contact-form label.has-phone-error .phone-field-help{color:#b7352f}
+.contact-form label.has-phone-error .phone-field-help::before{content:"Please enter exactly 10 digits. ";font-weight:850}
+.contact-form label.has-phone-error .phone-field-help{font-size:0}
+.contact-form label.has-phone-error .phone-field-help::before{font-size:10px}
