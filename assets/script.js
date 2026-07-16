@@ -6,6 +6,23 @@ const observer = new IntersectionObserver(entries => entries.forEach(entry => { 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 const form = document.querySelector('#contactForm');
+const phoneInput = document.querySelector('input[name="phone"]');
+if (phoneInput) {
+  const validatePhone = showError => {
+    phoneInput.value = phoneInput.value.replace(/\D/g, '').slice(0, 10);
+    const complete = phoneInput.value.length === 10;
+    phoneInput.setCustomValidity(complete || phoneInput.value.length === 0 ? '' : 'Please enter exactly 10 digits.');
+    phoneInput.closest('label').classList.toggle('has-phone-error', showError && !complete && phoneInput.value.length > 0);
+    return complete;
+  };
+  phoneInput.addEventListener('input', () => validatePhone(false));
+  phoneInput.addEventListener('blur', () => validatePhone(true));
+  phoneInput.addEventListener('invalid', () => {
+    validatePhone(true);
+    if (!phoneInput.value) phoneInput.setCustomValidity('Please enter your 10-digit phone number.');
+  });
+}
+
 if (form) form.addEventListener('submit', async e => {
   e.preventDefault();
   if (!form.reportValidity()) return;
