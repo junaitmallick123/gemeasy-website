@@ -264,3 +264,28 @@
 .journey-step p{margin:0;color:#60758d;font-size:13.5px;line-height:1.65}
 @media(max-width:900px){.journey-layout{grid-template-columns:1fr}.journey-desk{min-height:auto}.journey-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.tender-journey-section .section-heading{margin-bottom:28px}.journey-desk{padding:27px 23px;border-radius:21px}.journey-desk h3{font-size:25px}.journey-steps{grid-template-columns:1fr;gap:12px}.journey-step{grid-template-columns:46px minmax(0,1fr);gap:14px;padding:20px;border-radius:18px}.journey-number{width:44px;height:44px;border-radius:13px;font-size:14px}.journey-step h3{font-size:18px}}
+
+
+/* Contact page details redesign */
+.contact-copy>.direct-contact.contact-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:30px 0 34px}
+.contact-options .direct-contact-card{position:relative;display:grid;grid-template-columns:48px minmax(0,1fr);align-items:start;gap:14px;min-width:0;margin:0;padding:21px;border:1px solid #d9e8f6;border-radius:20px;background:linear-gradient(145deg,#fff 0%,#f7fbff 100%);box-shadow:0 10px 30px rgba(9,61,113,.07);color:#0a315f;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.contact-options .direct-contact-card:hover{transform:translateY(-3px);border-color:#8fc2ef;box-shadow:0 17px 38px rgba(9,61,113,.13)}
+.contact-options .contact-address-card{grid-column:1/-1;grid-template-columns:52px minmax(0,1fr) auto;padding:24px;background:linear-gradient(135deg,#07366c 0%,#0a579f 100%);border-color:transparent;color:#fff;box-shadow:0 18px 42px rgba(5,55,107,.18)}
+.contact-options .contact-address-card:hover{border-color:transparent;box-shadow:0 22px 48px rgba(5,55,107,.24)}
+.contact-options .direct-contact-card i.contact-detail-icon{display:grid;place-items:center;width:48px;height:48px;min-width:48px;margin:0;padding:0;border:1px solid #c9e2f8;border-radius:15px;background:#e9f5ff;color:#0a64bb;font-size:0;font-style:normal}
+.contact-options .contact-address-card i.contact-detail-icon{width:52px;height:52px;min-width:52px;border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.12);color:#a9d9ff}
+.contact-options .contact-detail-icon::before{display:block;font-size:22px;line-height:1}
+.contact-options .contact-location-icon::before{content:"⌖";font-size:25px}
+.contact-options .contact-phone-icon::before{content:"◔";transform:rotate(-35deg);font-size:25px}
+.contact-options .contact-email-icon::before{content:"✉";font-size:20px}
+.contact-options .direct-contact-card span{display:block;min-width:0}
+.contact-options .direct-contact-card small{display:block;margin:1px 0 7px;color:#5980a5;font-size:10px;font-weight:900;letter-spacing:.11em;line-height:1.3;text-transform:uppercase}
+.contact-options .contact-address-card small{color:#9fd4ff}
+.contact-options .direct-contact-card strong{display:block;color:#0b315d;font-size:14px;line-height:1.55;overflow-wrap:anywhere}
+.contact-options .contact-address-card strong{max-width:520px;color:#fff;font-size:14.5px;font-weight:650}
+.contact-options .contact-card-action{grid-column:2;display:flex;align-items:center;justify-content:space-between;gap:9px;margin-top:13px;padding-top:13px;border-top:1px solid #deebf7;color:#0b61b5;font-size:12px;font-weight:850;font-style:normal}
+.contact-options .contact-address-card .contact-card-action{grid-column:3;align-self:center;margin:0;padding:0;border:0;color:#fff;white-space:nowrap}
+.contact-options .contact-card-action em{display:grid;place-items:center;width:27px;height:27px;border-radius:50%;background:#e7f3ff;color:#0b61b5;font-size:13px;font-style:normal}
+.contact-options .contact-address-card .contact-card-action em{background:#fff;color:#07509b}
+@media(max-width:760px){.contact-copy>.direct-contact.contact-options{grid-template-columns:1fr}.contact-options .contact-address-card{grid-column:auto;grid-template-columns:48px minmax(0,1fr)}.contact-options .contact-address-card i.contact-detail-icon{width:48px;height:48px;min-width:48px}.contact-options .contact-address-card .contact-card-action{grid-column:2;justify-content:space-between;margin-top:13px;padding-top:13px;border-top:1px solid rgba(255,255,255,.18)}}
+@media(max-width:420px){.contact-options .direct-contact-card,.contact-options .contact-address-card{grid-template-columns:42px minmax(0,1fr);gap:12px;padding:17px;border-radius:17px}.contact-options .direct-contact-card i.contact-detail-icon,.contact-options .contact-address-card i.contact-detail-icon{width:42px;height:42px;min-width:42px;border-radius:13px}.contact-options .direct-contact-card strong,.contact-options .contact-address-card strong{font-size:13px}.contact-options .contact-card-action,.contact-options .contact-address-card .contact-card-action{grid-column:2}}
