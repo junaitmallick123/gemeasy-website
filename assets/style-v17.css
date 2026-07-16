@@ -372,3 +372,60 @@
 @keyframes guidePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
 @media(max-width:680px){.news-card-media{height:205px}.news-card-body{padding:19px}.news-card.news-card-enhanced:hover{transform:translateY(-3px)}}
 @media(prefers-reduced-motion:reduce){.news-hub::before,.news-card.news-card-enhanced,.news-state::after,.guide-diagram i{animation:none!important}.news-card.news-card-enhanced{opacity:1;transform:none}.news-card-media img,.guide-feature,.guide-card-new{transition:none}}
+
+
+/* Tenders page visual and motion refresh */
+.tender-hero{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(circle at 84% 25%,rgba(36,135,226,.24),transparent 27%),linear-gradient(135deg,#031a38 0%,#073d78 58%,#052b5b 100%)}
+.tender-hero::before{content:"";position:absolute;z-index:-1;inset:0;opacity:.17;background-image:linear-gradient(rgba(153,211,255,.25) 1px,transparent 1px),linear-gradient(90deg,rgba(153,211,255,.25) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(90deg,transparent 3%,#000 62%,transparent)}
+.tender-hero::after{content:"";position:absolute;z-index:-1;width:370px;height:370px;right:-100px;top:-130px;border:1px solid rgba(142,207,255,.18);border-radius:50%;box-shadow:0 0 0 44px rgba(128,201,255,.035),0 0 0 88px rgba(128,201,255,.025);animation:tenderOrbit 14s linear infinite}
+.tender-hero-copy{animation:tenderCopyIn .8s cubic-bezier(.2,.75,.25,1) both}
+.tender-hero-copy h1 em{position:relative;display:block}
+.tender-hero-copy h1 em::after{content:"";display:block;width:96px;height:3px;margin-top:15px;border-radius:4px;background:linear-gradient(90deg,#65bdff,transparent);animation:tenderLine 1.1s .45s ease both}
+.tender-hero-actions .button{box-shadow:0 12px 30px rgba(0,25,63,.18);transition:transform .25s ease,box-shadow .25s ease}
+.tender-hero-actions .button:hover{transform:translateY(-3px);box-shadow:0 17px 36px rgba(0,20,55,.28)}
+.tender-status-card{position:relative;overflow:hidden;border:1px solid rgba(151,211,255,.22)!important;border-radius:26px!important;background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.055))!important;box-shadow:0 24px 60px rgba(0,20,54,.25)!important;backdrop-filter:blur(12px);animation:tenderPanelIn .85s .14s cubic-bezier(.2,.75,.25,1) both}
+.tender-status-card::before{content:"";position:absolute;width:170px;height:170px;right:-80px;bottom:-90px;border-radius:50%;background:rgba(75,171,255,.14);filter:blur(3px)}
+.tender-status-line i{box-shadow:0 0 0 0 rgba(73,205,146,.55);animation:statusPing 2s infinite}
+.tender-status-meta{position:relative;z-index:2;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14)}
+.tender-status-meta>span{display:grid;grid-template-columns:28px minmax(0,1fr);gap:2px 9px;align-items:center;padding:10px;border:1px solid rgba(255,255,255,.1);border-radius:13px;background:rgba(2,27,60,.22)}
+.tender-status-meta i{grid-row:1/3;display:grid;place-items:center;width:28px;height:28px;border-radius:9px;background:rgba(93,186,255,.15);color:#9bd7ff;font-size:12px;font-style:normal}
+.tender-status-meta b{color:#fff;font-size:11px}.tender-status-meta small{color:#9dbad7;font-size:9px}
+.tender-discovery{position:relative;overflow:hidden;background:linear-gradient(180deg,#f8fbff,#fff)}
+.tender-discovery::before{content:"";position:absolute;width:420px;height:420px;left:-230px;bottom:-180px;border-radius:50%;background:radial-gradient(circle,rgba(25,124,216,.1),transparent 68%)}
+.tender-type-grid{position:relative;z-index:2}
+.tender-type-card{position:relative;isolation:isolate;overflow:hidden;border-radius:22px!important;opacity:0;transform:translateY(28px);animation:tenderCardIn .65s cubic-bezier(.2,.75,.25,1) forwards}
+.tender-type-card:nth-child(1){animation-delay:.08s}.tender-type-card:nth-child(2){animation-delay:.16s}.tender-type-card:nth-child(3){animation-delay:.24s}.tender-type-card:nth-child(4){animation-delay:.32s}
+.tender-type-card::before{content:"";position:absolute;z-index:-1;width:125px;height:125px;right:-68px;top:-65px;border-radius:50%;background:#e9f5ff;transition:transform .4s ease,background .4s ease}
+.tender-type-card::after{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,#0865bd,#56b5ff);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.tender-type-card:hover{transform:translateY(-8px)!important;border-color:#93c4ed!important;box-shadow:0 22px 46px rgba(7,58,109,.14)!important}
+.tender-type-card:hover::before{transform:scale(1.45);background:#dcefff}.tender-type-card:hover::after{transform:scaleX(1)}
+.tender-type-icon{transition:transform .3s ease,background .3s ease,color .3s ease}
+.tender-type-card:hover .tender-type-icon{transform:rotate(-4deg) scale(1.06);background:#0863b8;color:#fff}
+.tender-type-card a span{display:inline-block;transition:transform .25s ease}.tender-type-card:hover a span{transform:translate(3px,-3px)}
+.tender-notice{position:relative;overflow:hidden;border-radius:19px!important;box-shadow:0 13px 32px rgba(9,61,113,.07)}
+.tender-notice-icon{animation:noticeFloat 2.8s ease-in-out infinite}
+.tender-process{position:relative;overflow:hidden;background:linear-gradient(135deg,#f2f8fe 0%,#fbfdff 100%)}
+.tender-process-grid{position:relative;gap:18px}
+.tender-process-grid::before{content:"";position:absolute;left:8%;right:8%;top:35px;height:2px;background:linear-gradient(90deg,#1682df 0 50%,#c8ddf0 50%);background-size:200% 100%;animation:processFlow 4.5s ease-in-out infinite}
+.tender-step{position:relative;z-index:2;overflow:hidden;border:1px solid #d6e6f4!important;border-radius:21px!important;background:#fff!important;box-shadow:0 10px 30px rgba(7,55,105,.07);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease!important}
+.tender-step:hover{transform:translateY(-8px);border-color:#91c3ed!important;box-shadow:0 20px 42px rgba(7,55,105,.13)}
+.tender-step b{position:relative;display:grid;place-items:center;width:52px;height:52px;border:6px solid #f4f9fe;border-radius:17px;background:#e6f3ff;color:#0870ca;box-shadow:0 0 0 1px #c9e2f7;transition:transform .3s ease,background .3s ease,color .3s ease}
+.tender-step:hover b{transform:rotate(-6deg) scale(1.05);background:#0870ca;color:#fff}
+.tender-step h3{margin-top:20px}
+.tender-help{position:relative;overflow:hidden}
+.tender-help-panel{position:relative;isolation:isolate;overflow:hidden;border-radius:28px!important;box-shadow:0 24px 58px rgba(2,38,82,.2)}
+.tender-help-panel::before{content:"";position:absolute;z-index:-1;width:290px;height:290px;right:-80px;top:-110px;border:1px solid rgba(255,255,255,.15);border-radius:50%;box-shadow:0 0 0 38px rgba(255,255,255,.035),0 0 0 76px rgba(255,255,255,.025);animation:helpGlow 5s ease-in-out infinite}
+.tender-help-panel .button{transition:transform .25s ease,box-shadow .25s ease}.tender-help-panel .button:hover{transform:translateY(-4px) scale(1.015);box-shadow:0 15px 34px rgba(0,21,53,.25)}
+@keyframes tenderCopyIn{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:none}}
+@keyframes tenderPanelIn{from{opacity:0;transform:translateX(30px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes tenderCardIn{to{opacity:1;transform:translateY(0)}}
+@keyframes tenderLine{from{width:0;opacity:0}}
+@keyframes statusPing{70%{box-shadow:0 0 0 9px rgba(73,205,146,0)}100%{box-shadow:0 0 0 0 rgba(73,205,146,0)}}
+@keyframes tenderOrbit{to{transform:rotate(360deg)}}
+@keyframes noticeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes processFlow{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+@keyframes helpGlow{0%,100%{transform:scale(.92);opacity:.6}50%{transform:scale(1.08);opacity:1}}
+@media(max-width:850px){.tender-process-grid::before{display:none}.tender-status-meta{grid-template-columns:1fr}.tender-type-card{animation-delay:0s!important}}
+@media(max-width:560px){.tender-status-card{border-radius:21px!important}.tender-status-meta{grid-template-columns:repeat(2,minmax(0,1fr))}.tender-status-meta>span{grid-template-columns:24px minmax(0,1fr);padding:8px}.tender-status-meta i{width:24px;height:24px}.tender-type-card:hover,.tender-step:hover{transform:translateY(-3px)!important}.tender-help-panel{border-radius:22px!important}}
+@media(max-width:380px){.tender-status-meta{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.tender-hero::after,.tender-hero-copy,.tender-status-card,.tender-status-line i,.tender-type-card,.tender-notice-icon,.tender-process-grid::before,.tender-help-panel::before{animation:none!important}.tender-type-card{opacity:1;transform:none}}
