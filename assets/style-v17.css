@@ -456,3 +456,30 @@
 .contact-form label.has-phone-error .phone-field-help::before{content:"Please enter exactly 10 digits. ";font-weight:850}
 .contact-form label.has-phone-error .phone-field-help{font-size:0}
 .contact-form label.has-phone-error .phone-field-help::before{font-size:10px}
+
+
+/* Contact details alignment and motion refinement */
+.contact-copy>.direct-contact.contact-options{grid-template-columns:minmax(0,1fr)!important;gap:12px}
+.contact-options .direct-contact-card,.contact-options .contact-address-card{grid-column:auto!important;grid-template-columns:48px minmax(0,1fr) auto!important;align-items:center!important;gap:14px;padding:18px 19px;border-radius:18px;opacity:0;transform:translateX(-18px);animation:contactCardEnter .55s cubic-bezier(.2,.75,.25,1) forwards}
+.contact-options .direct-contact-card:nth-child(1){animation-delay:.08s}
+.contact-options .direct-contact-card:nth-child(2){animation-delay:.17s}
+.contact-options .direct-contact-card:nth-child(3){animation-delay:.26s}
+.contact-options .contact-address-card{grid-template-columns:48px minmax(0,1fr) auto!important;padding:21px}
+.contact-options .contact-address-card i.contact-detail-icon{width:48px;height:48px;min-width:48px}
+.contact-options .direct-contact-card span{align-self:center}
+.contact-options .direct-contact-card small{margin-bottom:5px}
+.contact-options .contact-whatsapp-card strong,.contact-options .contact-email-card strong{white-space:nowrap!important;overflow-wrap:normal!important;word-break:normal!important;font-size:14px}
+.contact-options .contact-card-action,.contact-options .contact-address-card .contact-card-action{grid-column:3!important;align-self:center;justify-content:flex-end;min-width:max-content;margin:0!important;padding:0!important;border:0!important;white-space:nowrap}
+.contact-options .direct-contact-card::after{content:"";position:absolute;inset:auto 18px 0;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,#2c92e8,transparent);transform:scaleX(0);transition:transform .35s ease}
+.contact-options .direct-contact-card:hover::after{transform:scaleX(1)}
+.contact-options .direct-contact-card:hover .contact-detail-icon{transform:rotate(-5deg) scale(1.06)}
+.contact-options .contact-detail-icon{transition:transform .3s ease,background .3s ease}
+.contact-options .contact-card-action em{transition:transform .28s ease,background .28s ease}
+.contact-options .direct-contact-card:hover .contact-card-action em{transform:rotate(45deg);background:#dceeff}
+.contact-options .contact-address-card:hover .contact-card-action em{background:#fff}
+@keyframes contactCardEnter{to{opacity:1;transform:translateX(0)}}
+@media(max-width:1100px) and (min-width:761px){.contact-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important}.contact-options .direct-contact-card,.contact-options .contact-address-card{grid-template-columns:44px minmax(0,1fr)!important}.contact-options .direct-contact-card i.contact-detail-icon,.contact-options .contact-address-card i.contact-detail-icon{width:44px;height:44px;min-width:44px}.contact-options .contact-card-action,.contact-options .contact-address-card .contact-card-action{grid-column:2!important;justify-content:space-between;margin-top:10px!important;padding-top:10px!important;border-top:1px solid #deebf7!important}.contact-options .contact-address-card .contact-card-action{border-top-color:rgba(255,255,255,.18)!important}.contact-options .contact-whatsapp-card strong,.contact-options .contact-email-card strong{font-size:13px}}
+@media(max-width:760px){.contact-options .direct-contact-card,.contact-options .contact-address-card{grid-template-columns:44px minmax(0,1fr) auto!important}.contact-options .direct-contact-card i.contact-detail-icon,.contact-options .contact-address-card i.contact-detail-icon{width:44px;height:44px;min-width:44px}.contact-options .contact-card-action,.contact-options .contact-address-card .contact-card-action{grid-column:3!important;margin:0!important;padding:0!important;border:0!important}}
+@media(max-width:520px){.contact-options .direct-contact-card,.contact-options .contact-address-card{grid-template-columns:42px minmax(0,1fr)!important;align-items:start!important;padding:16px}.contact-options .contact-card-action,.contact-options .contact-address-card .contact-card-action{grid-column:2!important;justify-content:space-between;margin-top:10px!important;padding-top:10px!important;border-top:1px solid #deebf7!important}.contact-options .contact-address-card .contact-card-action{border-top-color:rgba(255,255,255,.18)!important}.contact-options .contact-whatsapp-card strong,.contact-options .contact-email-card strong{font-size:12.5px}}
+@media(max-width:350px){.contact-options .contact-email-card strong{white-space:normal!important;overflow-wrap:anywhere!important}}
+@media(prefers-reduced-motion:reduce){.contact-options .direct-contact-card,.contact-options .contact-address-card{opacity:1;transform:none;animation:none!important}.contact-options .contact-detail-icon,.contact-options .contact-card-action em{transition:none}}
