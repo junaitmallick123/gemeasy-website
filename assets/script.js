@@ -6,7 +6,42 @@ const observer = new IntersectionObserver(entries => entries.forEach(entry => { 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 const form = document.querySelector('#contactForm');
-if (form) form.addEventListener('submit', e => { e.preventDefault(); form.querySelector('.form-status').textContent = 'Thank you. Your form is ready to be connected to your preferred inbox or CRM.'; form.reset(); });
+if (form) form.addEventListener('submit', async e => {
+  e.preventDefault();
+  if (!form.reportValidity()) return;
+  const status = form.querySelector('.form-status');
+  const button = form.querySelector('button[type="submit"]');
+  const originalButton = button.innerHTML;
+  const honeypot = form.querySelector('[name="_gotcha"]');
+  if (honeypot && honeypot.value) return;
+  button.disabled = true;
+  button.setAttribute('aria-busy', 'true');
+  button.innerHTML = 'Sending Enquiry <span>…</span>';
+  status.className = 'form-status is-sending';
+  status.textContent = 'Please wait while we securely send your enquiry.';
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    });
+    if (!response.ok) {
+      const data = await response.json().catch(() => null);
+      const message = data && Array.isArray(data.errors) ? data.errors.map(error => error.message).join(' ') : '';
+      throw new Error(message || 'Submission could not be completed.');
+    }
+    form.reset();
+    status.className = 'form-status is-success';
+    status.textContent = 'Thank you. Your enquiry has been sent to the GemEasy team successfully.';
+  } catch (error) {
+    status.className = 'form-status is-error';
+    status.textContent = 'We could not send your enquiry right now. Your details are still here—please try again or contact us on WhatsApp.';
+  } finally {
+    button.disabled = false;
+    button.removeAttribute('aria-busy');
+    button.innerHTML = originalButton;
+  }
+});
 
 const reviewTrack = document.querySelector('.review-track');
 if (reviewTrack) {
