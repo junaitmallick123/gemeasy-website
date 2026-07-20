@@ -1,26 +1,19 @@
 {
-  "updatedAt": "2026-07-20T11:24:07.441Z",
+  "updatedAt": "2026-07-20T17:11:33.580Z",
   "articles": [
     {
-      "title": "Rs64cr Varanasi Police Commissionerate HQ likely by 2027-28",
-      "description": "Varanasi police commissionerate HQ: UP clears Rs 64 crore for 9-storey building at Transport Line, to be built by PWD; work to start after tender, target 2027-28.",
-      "url": "https://timesofindia.indiatimes.com/city/varanasi/rs64cr-varanasi-police-commissionerate-hq-likely-by-2027-28/articleshow/132500837.cms",
-      "source": "The Times Of India",
-      "publishedAt": "2026-07-19 19:07:22"
+      "title": "SC rejects Centre's plea against HC order quashing consular, passport and visa services",
+      "description": "The Supreme Court dismissed the Centre's plea challenging a Delhi High Court verdict. This verdict had quashed the tender process for consular, passport, and visa services abroad. The Ministry of External Affairs and Engineers India Limited can make temporary arrangements for service continuity. These arrangements are to ensure uninterrupted delivery while a fresh tender process is completed.",
+      "url": "https://economictimes.indiatimes.com/nri/latest-updates/sc-rejects-centres-plea-against-hc-order-quashing-consular-passport-and-visa-services-in-abu-dhabi-kuwait-singapore-canberra/articleshow/132512594.cms",
+      "source": "The Economic Times",
+      "publishedAt": "2026-07-20 04:45:27"
     },
     {
-      "title": "KTU headquarters project hits another hurdle",
-      "description": "Differences over contract revision could trigger re-tender, delaying work further",
-      "url": "https://timesofindia.indiatimes.com/city/thiruvananthapuram/ktu-headquarters-project-hits-another-hurdle/articleshow/132500424.cms",
-      "source": "The Times Of India",
-      "publishedAt": "2026-07-19 18:43:54"
-    },
-    {
-      "title": "Govt eases battery PLI norms to attract more storage players; subsidies lowered",
-      "description": "The new 10 GWh tender, the final part of the larger 50 GWh initiative under the ₹18,100-crore production-linked incentive (PLI) scheme for advanced chemistry cells (ACC), was floated on 15 July and marks a shift in policy priorities, according to tender documents reviewed by Mint.",
-      "url": "https://www.livemint.com/economy/govt-eases-battery-pli-norms-to-attract-more-storage-players-subsidies-lowered-11784455468074.html",
-      "source": "Mint",
-      "publishedAt": "2026-07-19 13:45:32"
+      "title": "Kerala Recognises ISTS Benefits for RE and BESS in New Power Procurement Norms",
+      "description": "The Kerala State Electricity Regulatory Commission (KSERC) has approved changes to Kerala State Electricity Board's (KSEB) bidding framework for procuring 300 MW of peak power, a move expected to improve participation from renewable energy and battery energy storage system (BESS) developers by recognising the transmission cost advantages available to such projects. The revised framework pertains to KSEB's tender for procuring 300 MW of power during evening peak hours (6 pm to midnight) for a five-year period from January 2027 to December 2031. KSEB had sought modifications after renewable energy and storage developers raised concerns over the existing bid evaluation methodology, which did not adequately account for interstate transmission system (ISTS) charge waivers available to clean energy projects. Evaluation of Bids According to KSEB, evaluating bids solely at the generator's CTU interconnection point could disadvantage renewable and storage-based projects despite their eligibility for full or partial ISTS charge waivers under central government policies. The utility argued that such an approach would fail to reflect the actual landed cost of power to Kerala consumers. KSERC agreed with KSEB's proposal to incorporate applicable ISTS charges into bid evaluation, while clarifying that the revised methodology would be used only for ranking bids and identifying the lowest bidder, without altering commercial settlement provisions under power purchase agreements. The commission noted that renewable energy projects, particularly solar, wind and energy storage systems, are increasingly playing a critical role in meeting utilities' power requirements and that the Centre has introduced ISTS charge waivers to promote deployment of these technologies. The order highlighted that solar and wind projects commissioned before June 30, 2025 are eligible for 100% ISTS waiver, with benefits gradually tapering for later projects. Pumped hydro storage projects awarded by June 2028 continue to enjoy full waivers, while certain standalone and RE-linked BESS projects also remain eligible for transmission charge exemptions. RE & BESS Projects Importantly, KSERC directed KSEB to ensure that electricity procured from renewable energy and BESS projects under the tender would count towards the utility's Renewable Purchase Obligation (RPO) and Renewable Consumption Obligation (RCO) targets, and to suitably incorporate such provisions into the bidding documents. The regulator also observed that the existing medium-term procurement guidelines issued by the Ministry of Power were originally framed primarily for coal-linked procurement under the SHAKTI policy and did not directly address procurement from renewable energy and storage projects. Consequently, modifications were considered necessary to accommodate evolving market realities and ensure competitive neutrality among thermal, renewable and storage-based suppliers. KSEB had initially received multiple requests from prospective renewable energy and BESS developers seeking additional time and clarity in the bidding framework due to the complexities associated with structuring bids under the lump-sum tariff mechanism. The utility subsequently extended bid timelines and proposed amendments to facilitate broader participation and better price discovery. With the approval, Kerala's peak power procurement framework is expected to become more conducive for renewable and storage developers, potentially enabling cleaner resources to compete more effectively with conventional generation sources in meeting the state's growing evening peak demand.",
+      "url": "https://www.saurenergy.com/solar-energy-news/kerala-recognises-ists-benefits-for-re-and-bess-in-new-power-procurement-norms-12180124",
+      "source": "Saur Energy",
+      "publishedAt": "2026-07-20 04:14:58"
     }
   ]
 }
