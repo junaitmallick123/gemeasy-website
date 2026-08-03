@@ -1,33 +1,19 @@
 {
-  "updatedAt": "2026-08-02T21:30:43.133Z",
+  "updatedAt": "2026-08-03T12:42:49.357Z",
   "articles": [
+    {
+      "title": "Rs 116 cr sanctioned for free fish & shrimp seed distribution",
+      "description": "The Telangana government has approved ₹116 crore to provide free fish and shrimp seed to fishermen, aiming to boost local livelihoods and promote sustainable aquaculture across the state’s water bodies.",
+      "url": "https://www.thehansindia.com/news/cities/hyderabad/rs-116-cr-sanctioned-for-free-fish-shrimp-seed-distribution-1104376",
+      "source": "The Hans India",
+      "publishedAt": "2026-08-02 19:46:12"
+    },
     {
       "title": "A decade of inclusion: How GeM is transforming public procurement for women entrepreneurs in India",
       "description": "Discover how GeM's Womaniya initiative has enabled over 2.24 lakh women-led enterprises to access public procurement and drive inclusive economic growth in India.",
       "url": "https://economictimes.indiatimes.com/small-biz/entrepreneurship/a-decade-of-inclusion-how-gem-is-transforming-public-procurement-for-women-entrepreneurs-in-india/articleshow/132803752.cms",
       "source": "The Economic Times",
       "publishedAt": "2026-08-02 08:58:55"
-    },
-    {
-      "title": "From biometrics to GPS patrols: NTA bets on stronger security after NEET controversy with ₹7.5 crore tender",
-      "description": "The contract will initially run for two years, with the option of two one-year extensions based on satisfactory performance.",
-      "url": "https://www.businesstoday.in/india/story/from-biometrics-to-gps-patrols-nta-bets-on-stronger-security-after-neet-controversy-with-rs7-5-crore-tender-546701-2026-08-02",
-      "source": "Business News India",
-      "publishedAt": "2026-08-02 06:26:10"
-    },
-    {
-      "title": "NTA Invites Printing Firms To Handle Confidential Exam Materials; Applications Close August 20",
-      "description": "NTA has invited bids from eligible printing agencies for confidential exam material printing Applications can be submitted through the GeM portal till August 20 2026",
-      "url": "https://www.thedailyjagran.com/education/nta-invites-printing-firms-to-handle-confidential-exam-materials-applications-close-august-20-10323293",
-      "source": "Jagran English",
-      "publishedAt": "2026-08-02 05:37:09"
-    },
-    {
-      "title": "NTA Floats Rs 7.5 Crore Tender for Round-the-Clock Security at Delhi HQ and Regional Offices",
-      "description": "Following the NEET-UG 2026 controversy, the National Testing Agency has floated a Rs 7.5 crore tender for 24/7 security at its Delhi headquarters and regional offices.",
-      "url": "https://www.outlookindia.com/national/nta-floats-rs-75-crore-tender-for-round-the-clock-security-at-delhi-hq-and-regional-offices",
-      "source": "Outlook",
-      "publishedAt": "2026-08-02 02:18:36"
     }
   ]
 }
