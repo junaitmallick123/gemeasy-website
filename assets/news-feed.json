@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-08-08T08:21:46.166Z",
+  "updatedAt": "2026-08-08T14:16:35.130Z",
   "articles": [
+    {
+      "title": "Blacklisting A Contractor Is 'Civil And Commercial Death': MP High Court",
+      "description": "The Madhya Pradesh High Court's five-judge bench ruled that blacklisting a government contractor amounts to \"civil and commercial death\" because it destroys future business opportunities and goodwill. The court held that only a chief engineer can issue blacklisting orders and clarified that such decisions can be challenged through writ petitions.",
+      "url": "https://www.freepressjournal.in/indore/blacklisting-a-contractor-is-civil-and-commercial-death-mp-high-court",
+      "source": "The Free Press Journal",
+      "publishedAt": "2026-08-07 23:30:00"
+    },
     {
       "title": "Bids Invited For ₹4,127-Crore New Bombay High Court Complex In Bandra; Deadline Set For September 16",
       "description": "According to the tender issued by the North Mumbai (Public Works) Division, the proposed high court complex will come up on the Bandra Government Colony. The project has a total built-up area of 5,08,034.45 square metres. The selected contractor will also be responsible for maintaining the complex for 10 years during the defect liability period.",
@@ -42,13 +49,6 @@
       "url": "https://www.tribuneindia.com/news/delhi/delhi-health-dept-finds-no-evidence-of-overpricing-in-cpa-purchases",
       "source": "The Tribune India",
       "publishedAt": "2026-08-06 23:36:13"
-    },
-    {
-      "title": "Delhi Health Dept rejects overpricing allegations in CPA procurements amid probe",
-      "description": "New Delhi: In a report submitted to the Delhi government's Directorate of Vigilance, the State Health Department rejected allegations of overpricing in the procurement of medicines, medical equipment...",
-      "url": "https://medicaldialogues.in/news/health/hospital-diagnostics/delhi-health-dept-rejects-overpricing-allegations-in-cpa-procurements-amid-probe-176572",
-      "source": "Business Medical Dialogues",
-      "publishedAt": "2026-08-06 08:45:30"
     }
   ]
 }
