@@ -1,6 +1,13 @@
 {
-  "updatedAt": "2026-08-14T05:49:44.349Z",
+  "updatedAt": "2026-08-14T09:44:38.805Z",
   "articles": [
+    {
+      "title": "Maharashtra Leases 1,500 Acres of Land to Nibe Group Without Tender",
+      "description": "The rent will rise by 3 per cent every year, while the company will have to pay three years’ rent in advance to the MSFC.",
+      "url": "https://www.deccanchronicle.com/nation/maharashtra-leases-1500-acres-of-land-to-nibe-group-without-tender-1978966",
+      "source": "Andhrabhoomi",
+      "publishedAt": "2026-08-13 17:56:20"
+    },
     {
       "title": "India urea import offers decline 12% as war supply squeeze eases",
       "description": "India's urea import offers dropped significantly, signaling market easing after war-driven tightness. Offers for the soil nutrient were twelve percent below June's purchase price. State-run producers received bids for millions of tons against tender requirements. Prices have crashed to less than half of earlier war-driven levels. Vessel traffic through the Strait of Hormuz has held below normal.",
@@ -14,13 +21,6 @@
       "url": "https://sambadenglish.com/latest-news/odisha-plans-16000-crore-power-projects-to-strengthen-grid-network-support-industrial-growth-12258354",
       "source": "Sambad English",
       "publishedAt": "2026-08-13 17:11:39"
-    },
-    {
-      "title": "Rare Earth Magnet Scheme: 20 Bids Received, L&T and Coal India Among Key Bidders",
-      "description": "New Delhi: The government’s Rs 7,280-crore scheme to promote domestic manufacturing of rare earth permanent magnets has received 20 bids, including from Larsen & Toubro, Coal India and ReNew, for setting up integrated manufacturing facilities in the country, the Ministry of Heavy Industries said on Thursday. The bids were received through a global tender for [...] The post Rare Earth Magnet Scheme: 20 Bids Received, L&T and Coal India Among Key Bidders appeared first on KalingaTV .",
-      "url": "https://kalingatv.com/business/rare-earth-magnet-scheme-20-bids-received-lt-and-coal-india-among-key-bidders/",
-      "source": "Kalinga Tv",
-      "publishedAt": "2026-08-13 15:55:51"
     },
     {
       "title": "AAP alleges corruption in bicycle procurement, demands probe",
@@ -56,13 +56,6 @@
       "url": "https://www.thestatesman.com/cities/delhi-minister-sood-junks-aaps-allegations-over-bicycle-procurement-calls-it-malicious-campaign-1503626859.html",
       "source": "The Statesman",
       "publishedAt": "2026-08-12 13:09:56"
-    },
-    {
-      "title": "7.03 Lakh MSMEs Receive ZED Certification As Govt Pushes Sustainable Manufacturing",
-      "description": "NewsBizkoot.com - Business News Blog for Millenialaires New Delhi, Aug 11 (KNN) More than 7 lakh micro, small and medium enterprises (MSMEs)...",
-      "url": "https://newsbizkoot.com/business-corporate-industry-biz/2026/7-03-lakh-msmes-receive-zed-certification-as-govt-pushes-sustainable-manufacturing/",
-      "source": "Newsbizkoot.com",
-      "publishedAt": "2026-08-12 09:36:32"
     }
   ]
 }
