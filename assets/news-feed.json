@@ -1,4 +1,19 @@
 {
-  "updatedAt": "2026-09-22T17:00:28.779Z",
-  "articles": []
+  "updatedAt": "2026-09-22T21:22:55.726Z",
+  "articles": [
+    {
+      "title": "Himachal to Curb Independent Tenders for River Sand-Gravel Extraction",
+      "description": "CM Sukhu reaffirms state's rights over natural resources in assembly",
+      "url": "https://www.rozanaspokesman.com/news/himachal-pradesh/220926/himachal-to-curb-independent-tenders-for-river-sand-gravel-extraction.html",
+      "source": "Rozana Spokesman",
+      "publishedAt": "2026-09-22 06:18:58"
+    },
+    {
+      "title": "Bureaucratic paralysis chokes medicine supplies in government hospitals",
+      "description": "Kerala hospitals face acute medicine shortages due to KMSCL's administrative paralysis and re-tendering delays, impacting supplies from paracetamol to cancer drugs, with officials expecting deliveries soon.",
+      "url": "https://www.onmanorama.com/kerala/top-news/2026/09/22/kmscl-supply-crisis-delays-hospitals-medicine-scarcity-kerala.html",
+      "source": "Onmanorama",
+      "publishedAt": "2026-09-22 05:25:20"
+    }
+  ]
 }
