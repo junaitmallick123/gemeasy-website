@@ -1,4 +1,4 @@
-.service-page .home-header { position:relative; margin-bottom:0; }
+.service-page .home-header { margin-bottom:0; }
 .service-page :is(.tender-hero,.page-hero) {
   padding:clamp(38px,7vw,96px) 0;
   background:radial-gradient(ellipse at 79% 30%,#2856a4bf,transparent 67%);
