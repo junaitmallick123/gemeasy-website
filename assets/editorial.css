@@ -216,7 +216,7 @@
 }
 
 /* Keep the news list below the navigation, with bounded text inside each card. */
-.blogs-page .home-header { position: relative; margin-bottom: 0; }
+.blogs-page .home-header { margin-bottom: 0; }
 .blogs-page .editorial-hero { padding-top: clamp(28px, 5vw, 74px); }
 .blogs-page { scroll-margin-top: 0; }
 .blogs-page .news-card-body h3,
